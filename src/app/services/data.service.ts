@@ -57,7 +57,7 @@ export class DataService {
   addTask(uname:any, task:any){
     var DataBase=this.DataBase;
     DataBase[uname]['tasks'].push(task)
-
+    localStorage.setItem('DataBase',JSON.stringify(DataBase));
     return this.DataBase[uname].tasks;
   }
   
@@ -79,6 +79,7 @@ export class DataService {
          DataBase[uname]['tasks'][t]=etask;
       }
     }
+    localStorage.setItem('DataBase',JSON.stringify(DataBase));
     return this.DataBase[uname].tasks;
     // return etask;
     }
@@ -95,6 +96,7 @@ export class DataService {
     //   }
     // }
     this.DataBase[uname].tasks = this.DataBase[uname].tasks.filter((i:any)=> i!==currentTask);
+    localStorage.setItem('DataBase',JSON.stringify(DataBase));
 
         return this.DataBase[uname].tasks;
 

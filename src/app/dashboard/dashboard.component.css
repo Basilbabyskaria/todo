@@ -1,3 +1,13 @@
-.btn-text{
-    text-align: start;
+button{
+    text-decoration: none;
+
+}
+#input_btn{
+    background-color: transparent;
+    color: black;
+    
+}
+.input-group{
+    border-radius: 2px;
+    border-color: blue;
 }
